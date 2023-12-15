@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -70,21 +71,60 @@ body{
     border-radius: 50px;
     width:450px;
     height: 50px;
+    padding-left: 30px;
 }
 
+.email_box:focus{
+    outline:none;
+    color:hsl(0, 36%, 70%);
+ 
+}
+
+.input span {
+    color: red;
+    display: none /* Esconde o span */
+  }
+  
+ .input input:invalid + span {
+    display:flex;
+    flex-direction: column; 
+    padding: 15px 25px;
+    font-size: 14px;/* Exibe o span somente se o input for inválido. */
+  }
+
+  .input input:invalid + input{
+    outline: red;
+  }
+
+
+.email_box::placeholder{
+    color:hsla(0, 36%, 70%, 0.37);
+
+
+}
 .email_button{
     width:90px;
     height: 50px;
+    border: none;
     border-radius: 50px;
 
     background:linear-gradient(135deg, hsl(0, 80%, 86%) 35%,hsl(0, 74%, 74%) 100%);
     margin-left: -90px;
     box-shadow: 0px 15px 30px rgb(212, 212, 212);
-
+ 
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.email_button div{
+
+
+
+
+
+.email_button:active{
+    background:#F9D5D5;
     
+}
+
+
